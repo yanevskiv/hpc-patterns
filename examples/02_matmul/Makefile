@@ -1,8 +1,8 @@
 CXX = g++
-CXXFLAGS = -O3 -fdiagnostics-color=always -Wall
+CXXFLAGS = -O3 -fdiagnostics-color=always -Wall -Iinclude
 TARGET = run-matmul
 
-all: clean $(TARGET)
+all: $(TARGET)
 	@./$(TARGET)
 
 clean:
@@ -10,3 +10,4 @@ clean:
 
 $(TARGET): src/main.cpp
 	@$(CXX) $(CXXFLAGS) -o $(@) $(<)
+
